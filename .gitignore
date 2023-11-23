@@ -1,0 +1,2 @@
+#ignore files that will not change and are not applicable to application
+.DS_Store

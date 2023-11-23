@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>Snake Game</title>
+</head>
+<body>
+    <div class="center">
+        <div id="menu">
+            <label for="grid-size">Choose Grid Size</label>
+            <select name="grid-size" id="grid-size">
+                <!-- <option value="7">7 x 7</option>
+                <option value="9">9 x 9</option> -->
+                <option value="11">11 x 11</option>
+                <option value="13">13 x 13</option>
+                <option value="15" selected>15 x 15</option>
+                <option value="17">17 x 17</option>
+                <option value="19">19 x 19</option>
+                <option value="21">21 x 21</option>
+            </select>
+            <label for="speed">Choose Snake Speed</label>
+            <select name="speed" id="speed">
+                <option value="Slow">Slow</option>
+                <option value="Normal" selected>Normal</option>
+                <option value="Fast">Fast</option>
+                <option value="Faster">Faster</option>
+                <option value="Impossible">Impossible</option>
+            </select>
+            <div>
+                <label for="show-grid">Show Grid</label>
+                <input type="checkbox" name="show-grid" id="show-grid">
+            </div>
+            
+            <button id="start-btn">Start Game</button>
+        </div>
+        <div class="scoreboard">
+            <h2>Score: <span id="score">0</span> Win Condition: <span id="win-condition">--</span></h2>
+        </div>
+        <button id="new-game-btn">New Game</button>
+        <section id="game-board">
+            
+        </section>
+    </div>
+
+    <div class="ss-container">
+        <div class="header">
+            <h1>Theme Select and Statistics</h1>
+        </div>
+        <div class="flex">
+            <div class="shop">
+                <h2>Themes</h2>
+                <div class="themes">
+                    <div>
+                        <input type="radio" name="themes" id="theme1" value="default" checked>
+                        <label for="theme1">Default</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="themes" id="theme2" value="ocean">
+                        <label for="theme2">Ocean</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="themes" id="theme3" value="techno">
+                        <label for="theme3">Techno</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="themes" id="theme4" value="redland">
+                        <label for="theme4">Redland</label>
+                    </div>
+                </div>
+                <p>Purse: <span id="coins">--</span></p> <!-- display is set to none -->
+            </div>
+            <div class="stats">
+                <h2>Stats</h2>
+                <ul>
+                    <li>High Score: <span class="stat" id="high-score">--</span> on 
+                        <select name="high-score-grid" id="high-score-grid">
+                            <option value="11">11 x 11</option>
+                            <option value="13">13 x 13</option>
+                            <option value="15" selected>15 x 15</option>
+                            <option value="17">17 x 17</option>
+                            <option value="19">19 x 19</option>
+                            <option value="21">21 x 21</option>
+                        </select>
+                    </li>
+                    <li>Games Played: <span class="stat" id="total-games">--</span></li>
+                    <li>Total Score: <span class="stat" id="total-score">--</span></li>
+                    <li>Wins: <span class="stat" id="games-won">--</span></li>
+                </ul>
+                <button id="delete-stats">Delete Stats</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
